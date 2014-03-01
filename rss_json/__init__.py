@@ -24,8 +24,8 @@ def parse(url, etag=None, modified=None):
     for entry in data.get('entries', []):
         description = entry.get('description')
         description = description and clean_html(description)
-        timestamp = entry.get('date_parsed', time.gmtime())
-        timestamp = datetime.datetime(*timestamp[:6]).isoformat()
+        timestamp = entry.get('date_parsed')
+        timestamp = timestamp and datetime.datetime(*timestamp[:6]).isoformat()
         entry = {
             'id': create_entry_id(entry),
             'author': entry.get('author'),

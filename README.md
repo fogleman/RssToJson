@@ -1,4 +1,4 @@
-## RssToJson
+## RSS to JSON
 
 Simple Flask app for converting RSS feeds to JSON, supporting JSONP callbacks.
 

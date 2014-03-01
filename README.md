@@ -2,8 +2,6 @@
 
 Simple Flask app for converting RSS feeds to JSON, supporting JSONP callbacks.
 
-### Example
-
     {
       "entries": [
         {

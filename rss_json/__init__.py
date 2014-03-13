@@ -16,7 +16,6 @@ def create_entry_id(entry):
     return hashlib.md5(value.encode('utf-8')).hexdigest()
 
 def parse(url, etag=None, modified=None):
-    print etag, modified
     data = feedparser.parse(url,
         etag=etag, modified=modified, agent=USER_AGENT)
     entries = []
